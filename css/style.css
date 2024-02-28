@@ -20,7 +20,29 @@ body {
   backdrop-filter: blur(100px);
   mask-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%);
 }
-
+.name-logo {
+  position: absolute;
+  width: 700px;
+  left: 80px;
+  top: 260px;
+}
+.home-text {
+  position: absolute;
+  color: #fff;
+  left: 80px;
+  top: 600px;
+  text-align: left;
+}
+.home-text p,
+h2 {
+  font-size: 30px;
+}
+.name-grid {
+  position: absolute;
+  width: 500px;
+  left: 446px;
+  top: 184px;
+}
 .glassy-overlay {
   position: fixed;
   top: 0;
