@@ -8,19 +8,30 @@
 body {
   background-color: #08101b;
 }
+.top-container {
+  position: absolute;
+  width: 95%;
+  height: 95vh;
+  top: 0;
+  left: 2.5%;
+  background: linear-gradient(transparent 30%, #1d2855);
+  border: 2px solid rgba(151, 151, 151, 0.63);
+  border-radius: 100px;
+  backdrop-filter: blur(100px);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%);
+}
+
 .glassy-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: rgb(255, 255, 255, 0.05);
   backdrop-filter: blur(70px);
   pointer-events: none;
 }
-.container {
-  z-index: 1000;
-}
+
 .nav-bar {
   display: flex;
   position: fixed;
@@ -103,10 +114,11 @@ body {
   background-color: rgba(255, 255, 255, 0.158);
   width: 330px;
   height: 100px;
-  left: 1200px;
+  left: 1150px;
   top: 600px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 .contact-back::after {
   content: " ";
@@ -137,7 +149,18 @@ h3 {
 .contact-back h3 {
   font-size: 40px;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #154388);
+  border-radius: 6px;
+}
 
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #155bc4);
+  border-radius: 6px;
+}
 @keyframes pulse {
   from {
     transform: scale(0.5);
