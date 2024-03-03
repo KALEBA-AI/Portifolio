@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #efefef;
+}
+body {
+  background-color: #08101b;
+}
+.gallery-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.galleryp {
+  max-width: 620px;
+  text-align: center;
+  padding: 1rem 0 10rem 0;
+}
+.gallery-container {
+  display: flex;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0px auto;
+  flex-flow: row;
+  gap: 30px;
+  justify-content: center;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(255, 255, 255); */
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.rtop,
+.rbottom,
+.lbottom {
+  width: 350px;
+  background-color: rgb(11, 66, 59);
+  border-radius: 30px;
+  position: relative;
+}
+.rtop::after,
+.rbottom::after,
+.lbottom::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-color: #ffffff71;
+  backdrop-filter: blur(10px);
+  border-radius: 30px 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.rtop:hover::after,
+.rbottom:hover::after,
+.lbottom:hover::after {
+  opacity: 1;
+}
+
+.rtop {
+  height: 500px;
+}
+.rbottom {
+  height: 350px;
+}
+.ltop {
+  align-self: flex-start;
+  width: 300px;
+  height: 100px;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #5e89fe80, #0e104780);
+  opacity: 26%;
+  /* border:0.1px solid #fff; */
+  backdrop-filter: blur(15px);
+}
+.ltop:hover {
+  border: 1px solid #ffffff;
+}
+.lbottom {
+  height: 450px;
+}

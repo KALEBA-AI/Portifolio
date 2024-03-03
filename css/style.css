@@ -8,9 +8,10 @@
 body {
   background-color: #08101b;
 }
+
 .top-container {
   position: absolute;
-  width: 95%;
+  width: 95vw;
   height: 95vh;
   top: 0;
   left: 2.5%;
@@ -20,26 +21,29 @@ body {
   backdrop-filter: blur(100px);
   mask-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%);
 }
-.name-logo {
+.main-page-content {
   position: absolute;
-  width: 700px;
-  left: 80px;
-  top: 260px;
+  top: 250px;
+  left: 118px;
+  z-index: 10;
+}
+.name-logo {
+  width: 70vw;
 }
 .home-text {
-  position: absolute;
   color: #fff;
-  left: 80px;
-  top: 600px;
   text-align: left;
+  padding-top: 80px;
+  font-size: 35px;
+  font-weight: lighter;
 }
-.home-text p,
-h2 {
+.home-text h2 {
   font-size: 30px;
+  text-transform: uppercase;
 }
 .name-grid {
   position: absolute;
-  width: 500px;
+  width: 50vw;
   left: 446px;
   top: 184px;
 }
@@ -91,19 +95,19 @@ h2 {
 .active-text-back {
   position: fixed;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 215px;
-  left: 365px;
-  top: 70px;
+  left: 375px;
+  top: 77px;
 }
 .status {
   position: relative;
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  margin: 10px;
+  top: 1px;
+  left: 3px;
 }
 
 .status.online,
@@ -115,8 +119,8 @@ h2 {
   content: "";
   display: block;
   position: absolute;
-  left: -1px;
-  top: -1px;
+  left: -5px;
+  top: -5px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -125,8 +129,7 @@ h2 {
 }
 .active-text {
   position: relative;
-  left: -15px;
-  top: -2px;
+  left: 15px;
   color: #17aa40;
   font-size: 20px;
   font-weight: 400;
@@ -171,6 +174,20 @@ h3 {
 .contact-back h3 {
   font-size: 40px;
 }
+.side-explore {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 300px;
+  left: 1400px; 
+  color: #fff;
+  font-size: 30px;
+  rotate: 90deg;
+}
+.side-explore p{
+  font-size: 25px;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }

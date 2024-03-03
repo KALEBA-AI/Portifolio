@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #08101B;
+  height: 200vh;
+}
+.glass {
+  display: flex;
+  position: relative;
+  width: 90%;
+  height: 90vh;
+  margin-inline: auto;
+  backdrop-filter: blur(50px);
+}
+.circle {
+  position: absolute;
+  width: 18rem;
+  height: 8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    #2b0909,
+    #441410,
+    #d03f25,
+    #5c150d,
+    #2b0307
+  );
+  background-size: 300%;
+  filter: blur(25px);
+  z-index: -10;
+  animation: g-animation 35s infinite alternate;
+}
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 2.5rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    #2b0909,
+    #441410,
+    #180503,
+    #1f0406
+  );
+  z-index: 1000;
+}
+.side-gradient {
+  filter: blur(15px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform-origin: left bottom;
+}
+.g1 {
+  width: 20rem;
+  top: 45%;
+  left: 55%;
+  animation: g-animation 25s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.g2 {
+  width: 20rem;
+  top: 40%;
+  left: 60%;
+  animation: g-animation2 25s ease-in-out;
+  animation-iteration-count: infinite;
+}
+.g3 {
+  width: 30rem;
+  top: 40%;
+  left: 60%;
+  animation: g-animation3 45s ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes g-animation {
+  0% {
+    background-position: right;
+    transform: rotate(0deg);
+  }
+  100% {
+    background-position: left;
+    transform: rotate(360deg);
+  }
+}
+@keyframes g-animation2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes g-animation3 {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
