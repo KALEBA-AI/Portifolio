@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  outline: 1px solid red;
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+:root{
+  --button-width: 300px;
+  --button-height: 100px;
+}
+h3 {
+  font-weight: 300;
+}
+h6 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+body {
+  margin-top: 50px;
+  background-image: url(../../asset/Barber.png);
+  color: #f0f8ff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-nav {
+  display: flex;
+  gap: 10px;
+}
+.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(34, 42, 53);
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  gap: 5px;
+  filter: drop-shadow(20px);
+  filter: drop-shadow();
+}
+.ex-ar {
+  transform: rotate(135deg);
+}
+.arrow {
+  width: 15px;
+  height: 15px;
+}
+.rtop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: 25px;
+  backdrop-filter: blur(25px);
+  padding: 10px;
+  transition: 500ms ease-in-out;
+}
+.rtop-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  background-color: #262729;
+  top: 0;
+  left: 0;
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: 20px;
+
+  h3 {
+    font-size: 30px;
+  }
+  justify-content: space-between;
+  cursor: pointer;
+}
+.contact::after {
+  content: url(../../asset/Arrow.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  background-image: radial-gradient(#0e1047 10%, #08101b);
+  border-radius: 10px;
+}
+.logos{
+width: 100px;
+height: 100px;
+}

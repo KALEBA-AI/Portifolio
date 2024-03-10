@@ -1,12 +1,23 @@
-* {
-  /* outline: 1px solid red; */
+*,
+*::before,
+*::after {
+  outline: 1px solid red;
+
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body {
-  background-color: #08101b;
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(255, 253, 238);
+  background: #08101b;
 }
 
 .top-container {
@@ -15,199 +26,34 @@ body {
   height: 95vh;
   top: 0;
   left: 2.5%;
-  background: linear-gradient(transparent 30%, #1d2855);
-  border: 2px solid rgba(151, 151, 151, 0.63);
+  background: linear-gradient(transparent 30%, #040c2c);
+  border: 1px solid #ffffff;
+  opacity: 50%;
   border-radius: 100px;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(50px);
   mask-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%);
 }
-.main-page-content {
-  position: absolute;
-  top: 250px;
-  left: 118px;
-  z-index: 10;
-}
-.name-logo {
-  width: 70vw;
-}
-.home-text {
-  color: #fff;
-  text-align: left;
-  padding-top: 80px;
-  font-size: 35px;
-  font-weight: lighter;
-}
-.home-text h2 {
-  font-size: 30px;
-  text-transform: uppercase;
-}
-.name-grid {
-  position: absolute;
-  width: 50vw;
-  left: 446px;
-  top: 184px;
-}
-.glassy-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(255, 255, 255, 0.05);
-  backdrop-filter: blur(70px);
-  pointer-events: none;
+.main-page-content{
+  width: fit-content;
+  position: relative;
+  top: 200px;
+  left: 120px;
+
 }
 
-.nav-bar {
-  display: flex;
-  position: fixed;
-  width: 360px;
-  height: 31px;
-  left: 218px;
-  top: 76px;
-  align-items: center;
-  justify-content: space-between;
-  mix-blend-mode: soft-light;
+.name-logo {
+  width: 45vw;
+}
+
+.logo {
+  height: 20px;
 }
 .logo-svg {
   display: flex;
-  align-items: center;
-}
-.logo {
-  height: 30px;
-}
-.lname {
-  width: 99px;
-}
-.lc {
-  width: 30px;
-  padding-left: 5px;
-}
-.active-status-back {
-  background-color: #fff;
-  color: #17aa40;
-  position: absolute;
-  width: 215px;
-  height: 31px;
-  left: 145px;
-  border-radius: 16px;
-}
-.active-text-back {
   position: fixed;
-  display: flex;
-  align-items: center;
-  width: 215px;
-  left: 375px;
-  top: 77px;
-}
-.status {
-  position: relative;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  top: 1px;
-  left: 3px;
-}
-
-.status.online,
-.status.online:before {
-  background: radial-gradient(#17aa40, #094419);
-}
-
-.status:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -5px;
-  top: -5px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  z-index: -1;
-  animation: pulse 1.5s infinite ease-in;
-}
-.active-text {
-  position: relative;
-  left: 15px;
-  color: #17aa40;
-  font-size: 20px;
-  font-weight: 400;
-}
-.contact-back {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.158);
-  width: 330px;
-  height: 100px;
-  left: 1150px;
-  top: 600px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
   z-index: 1000;
-}
-.contact-back::after {
-  content: " ";
-  position: absolute;
-  background: linear-gradient(to bottom right, #0e1047, #08101b);
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  left: 280px;
-  top: 7px;
-}
-.contact-arrow {
-  position: fixed;
-  top: 13px;
-  left: 286px;
-  z-index: 1;
-}
-
-.contact-back h6,
-h3 {
-  padding-left: 30px;
-  color: #fff;
-}
-.contact-back h6 {
-  font-size: 30px;
-  font-weight: 300;
-}
-.contact-back h3 {
-  font-size: 40px;
-}
-.side-explore {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 300px;
-  left: 1400px; 
-  color: #fff;
-  font-size: 30px;
-  rotate: 90deg;
-}
-.side-explore p{
-  font-size: 25px;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(transparent, #154388);
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(transparent, #155bc4);
-  border-radius: 6px;
-}
-@keyframes pulse {
-  from {
-    transform: scale(0.5);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1.5);
-    opacity: 0;
-  }
+  left: 7rem;
+  top: 2rem;
+  mix-blend-mode: soft-light;
+  cursor: pointer;
 }
