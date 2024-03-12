@@ -1,46 +1,105 @@
 *,
 *::before,
 *::after {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  h1 {
+    font-size: 120px;
+  }
+  h2 {
+    font-size: 80px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
+:root {
+  --button-width: 305px;
+  --button-height: 115px;
+  --button-border-radius: 20px;
+  --main-container-width: calc(100% - 40px);
+  --main-container-height: 673px;
+  --main-container-bradius: 50px;
+  --contact-wxh-after: 45px;
+  --contact-bradius: 15px;
+  --font-thin: 100;
+  --font-light: 300;
+  --font-regular: normal;
+  --font-bold: 600;
+  --font-black: 900;
+  --font-h4: 26px;
+  --main-text-color: #a3afbf;
+  --button-color: #222a35;
+}
+/*Main Page css end*/
 body {
-  display: flex;
-  flex-direction: column;
-  min-width: 375px;
-  min-height: 100vh;
-  padding: 0px;
-  margin: 0px;
-  color: rgb(255, 253, 238);
   background: #08101b;
 }
 
 .top-container {
   position: absolute;
-  width: 95vw;
-  height: 95vh;
+  width: var(--main-container-width);
+  height: var(--main-container-height);
   top: 0;
-  left: 2.5%;
+  margin-inline: 20px;
   background: linear-gradient(transparent 30%, #040c2c);
   border: 1px solid #ffffff;
   opacity: 50%;
-  border-radius: 100px;
+  border-radius: var(--main-container-bradius);
   backdrop-filter: blur(50px);
   mask-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%);
+  z-index: -1;
 }
-.main-page-content{
-  width: fit-content;
-  position: relative;
-  top: 200px;
-  left: 120px;
-
+.top-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 100%;
+  height: 158px;
+  background-image: url('data:image/svg+xml,<svg width="993" height="159" viewBox="0 0 993 159" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 158V159H993V0H992C992 19.8823 975.882 36 956 36H44.3036C28.8396 36 16.3036 48.536 16.3036 64V144C16.3036 151.732 10.0356 158 2.30358 158H1Z" fill="%2308101B"/><g filter="url(%23filter0_f_797_9841)"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 156.973L1.48489 156.99C8.85966 157.249 14.9708 151.324 14.9406 143.945L14.6148 64.1185C14.5493 48.0562 27.552 35.0002 43.6145 35.0002H956C973.284 35.0002 987.642 22.4713 990.488 6H991.502C988.646 23.0263 973.838 36.0002 956 36.0002H43.6145C28.1059 36.0002 15.5515 48.6059 15.6148 64.1144L15.9406 143.941C15.9731 151.888 9.39188 158.268 1.44983 157.99L1 157.974V156.973Z" fill="url(%23paint0_linear_797_9841)" fill-opacity="0.66"/></g><defs><filter id="filter0_f_797_9841" x="0" y="5" width="992.502" height="153.999" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="0" result="effect1_foregroundBlur_797_9841"/></filter><linearGradient id="paint0_linear_797_9841" x1="-406.969" y1="-158.203" x2="989.503" y2="-158.203" gradientUnits="userSpaceOnUse"><stop stop-color="%23C2C9DD"/><stop offset="1" stop-color="%23DEE2ED"/></linearGradient></defs></svg>');
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
-
+.top-blur {
+  position: absolute;
+  width: calc(100% - 100px);
+  height: 65vh;
+  top: 0;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1297.44" height="742.674" viewBox="0 0 1297.44 742.674"><defs><radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.524" gradientTransform="matrix(-0.66, 0.752, -0.752, -0.66, 1.206, 0.454)" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="%23124868"/><stop offset="1" stop-color="%230e1047" stop-opacity="0"/></radialGradient></defs><path id="Path_3" data-name="Path 3" d="M-567.825-81.09H110.541c172.907-.486,154.622,0,318.273,0V227.093H-202.525c0,83.25-.51,104.846,0,132.4-82.216,0-85.061,4.23-365.3,0C-567.825,123.8-569.627,111.75-567.825-81.09Z" transform="translate(718.626 231.306)" fill="url(%23radial-gradient)"/></svg>');
+  filter: blur(50px);
+  z-index: -2;
+}
+.main-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  text-align: center;
+  width: calc(100% - 40px);
+  height: 565px;
+}
+.main-page-text {
+  margin-top: 20px;
+  font-weight: var(--font-light);
+  font-size: var(--font-h4);
+  color: var(--main-text-color);
+}
 .name-logo {
   width: 45vw;
 }
@@ -56,4 +115,119 @@ body {
   top: 2rem;
   mix-blend-mode: soft-light;
   cursor: pointer;
+}
+/*Navigation Page css end*/
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 20px 0 40px;
+  color: #ffffff;
+}
+
+.right-nav {
+  display: flex;
+  gap: 20px;
+}
+.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-color);
+  width: 185px;
+  height: 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 0px rgba(19, 24, 30, 1);
+}
+.container-ce {
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 5px;
+}
+
+.container-cb {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ex-ar {
+  transform: rotate(135deg);
+}
+
+.card-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: var(--button-border-radius);
+  background: var(--button-color);
+  cursor: pointer;
+}
+.rtop-top {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: var(--font-black);
+}
+.rbottom-text {
+  font-weight: var(--font-light);
+}
+.ab {
+  position: relative;
+  top: -22px;
+  left: -55px;
+}
+.contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  background-color: var(--button-color);
+  top: 0;
+  left: 0;
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: var(--button-border-radius);
+
+  h3 {
+    font-size: 30px;
+    font-weight: var(--font-light);
+  }
+  h6 {
+    font-size: 35px;
+    font-weight: var(--font-black);
+  }
+  justify-content: space-between;
+  cursor: pointer;
+}
+.contact::after {
+  content: url(../../asset/Arrow@2x.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: var(--contact-wxh-after);
+  height: var(--contact-wxh-after);
+  background-image: radial-gradient(#0e1047 10%, #08101b);
+  border-radius: var(--contact-bradius);
+}
+
+/* This section is for hover*/
+.card-button:hover {
+  .arrow {
+    transform: translateX(3px) translateY(-3px);
+    transition: all 500ms ease;
+  }
+}
+.contact:hover::after {
+  transform: translateX(3px) translateY(-3px);
+  transition: all 500ms ease;
+  .contact {
+    backdrop-filter: brightness(10);
+  }
 }
