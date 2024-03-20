@@ -16,7 +16,21 @@
 
 <body>
 
-    <div class="loader"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 150" width="5" height="150">
+        <rect x="0" y="0" rx="2" ry="2" width="2" height="150" fill="#01040c"/>
+        <rect x="0" y="0" rx="2" ry="2" width="2" height="150" fill="#a3afbf" transform="scale(1,0)">
+            <animateTransform attributeName="transform" type="translate"
+                              values="0,-5;0,-2;0,50;0,250"
+                              keyTimes="0;.2;.5;1"
+                              dur="4s" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="scale"
+                              values="1,.1;1,.5;1,.7;1,.1"
+                              keyTimes="0;.4;.8;1"
+                              dur="4s" repeatCount="indefinite" additive="sum"/>
+        </rect>
+    </svg>
+    
+    
 
 
 </body>
