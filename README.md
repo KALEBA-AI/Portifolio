@@ -1,6 +1,5 @@
 <h1>My Portfolio Project</h1><br>
 <p>Welcome to my portfolio project! As a UI/UX Designer and Software Engineer, I’ve combined my skills in both design and development to create this portfolio from scratch. This project showcases my ability to create intuitive, user-friendly designs and bring them to life with efficient, robust code.</p>
-
 <h2>Project Overview</h2>
 This portfolio is a comprehensive showcase of my work in UI/UX design and software engineering. It includes:
 <br> <br>
