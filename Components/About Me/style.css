@@ -78,6 +78,9 @@ body {
   align-items: center;
   gap: 50px;
 }
+.am-name{
+    line-height: 4.5rem;
+}
 .left-text {
   transform: rotate(180deg);
   writing-mode: vertical-rl;
@@ -92,5 +95,8 @@ body {
   width: 400px;
   h2 {
     font-weight: var(--font-thin);
+  }
+  p{
+    margin: 30px 0 0 5px;
   }
 }
