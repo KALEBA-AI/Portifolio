@@ -91,9 +91,14 @@ footer::after {
 .icons img {
   width: 60px;
   height: 60px;
+  transition: 500ms ease-in-out;
+}
+.icons img:hover {
+  transform: scale(110%);
 }
 .map-containner {
   display: flex;
+  margin-top: 30px;
   transform: translateX(-35px);
 }
 .map {
@@ -103,6 +108,6 @@ footer::after {
   transform: translateX(-150px) translateY(-60px);
 }
 .f-left {
-align-self:flex-end;
-margin: 0 100px 100px 0;
+  align-self: flex-end;
+  margin: 0 100px 50px 0;
 }
