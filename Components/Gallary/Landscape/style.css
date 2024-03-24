@@ -25,7 +25,6 @@
     font-size: 16px;
   }
 
-  color: #a3afbf;
 }
 :root {
   --button-width: 305px;
@@ -49,13 +48,11 @@
 body {
   background-color: #08101b;
 }
-.gallery-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.Landscape-gallery-section {
+  margin-top: 100px;
 }
 
-.gallery-container {
+.Landscape-gallery-container {
   display: flex;
   max-width: 1440px;
   height: 100%;
@@ -71,35 +68,41 @@ body {
   gap: 20px;
   justify-content: center;
 }
-.ltop,
+.ltop-landscape,
 .lbottom {
   width: 350px;
-  background-color: rgb(11, 66, 59);
+  background-image: url(../../../asset/unsplash.jpg);
+  object-fit: cover;
+  background-size: cover;
   border-radius: 30px;
   position: relative;
+  overflow: hidden;
 }
-.ltop::after,
+.ltop-landscape::after,
 .rbottom::after,
 .lbottom::after {
   content: "";
   position: absolute;
   width: 200px;
   height: 50px;
-  background-color: #ffffff71;
+  background-color: #ffffff10;
   backdrop-filter: blur(10px);
   border-radius: 30px 0;
   bottom: 0;
   right: 0;
   opacity: 0;
-  transition: 1s ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
-.ltop:hover::after,
+.ltop-landscape:hover::after,
 .lbottom:hover::after {
   opacity: 1;
 }
+.ltop-landscape:hover {
+  background-size: scale(110%);
+}
 
-.ltop {
+.ltop-landscape {
   height: 300px;
   width: 500px;
 }
@@ -127,11 +130,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+
 }
-.arrow {
-  width: 20px;
-  height: 20px;
-}
+
 .rtop-text {
   width: fit-content;
   font-size: 30px;
@@ -144,4 +145,19 @@ body {
   width: 450px;
   align-self: flex-start;
   margin-left: 20px;
+  color: var(--main-text-color);
+}
+.g-text{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+   width: 200px;
+  height: 50px;
+  background-color: #ffffff10;
+  backdrop-filter: blur(10px);
+  border-radius: 30px 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 500ms ease-in-out;
 }

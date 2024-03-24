@@ -115,9 +115,6 @@ body {
   text-transform: uppercase;
   font-weight: var(--font-black);
 }
-.rbottom-text {
-  font-weight: var(--font-light);
-}
 .ab {
   position: relative;
   top: -22px;
