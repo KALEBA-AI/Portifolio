@@ -43,6 +43,12 @@
   --button-color: #222a35;
   --margin-left: 40px;
 }
+.gap{
+  gap: 30px;
+}
+.gap2{
+  gap: 15px;
+}
 
 body {
   background-color: #08101b;
@@ -59,7 +65,7 @@ body {
   height: 100%;
   margin: 100px auto;
   flex-flow: row;
-  gap: 30px;
+
   justify-content: center;
 }
 .gallary {
@@ -68,9 +74,9 @@ body {
   position: relative;
 }
 
-.g-left {
-  height: 350px;
-  width: 590px;
+.pg-left {
+  height: 590px;
+  width: 350px;
 }
 .g-right {
   width: 405px;
@@ -121,8 +127,8 @@ body {
   width: 300px;
   height: 100px;
   border-radius: 25px;
-  background-image: linear-gradient(to right, #5e88fe, #0e1047);
-  backdrop-filter: blur(15px);
+  background-image: linear-gradient(to right, #5e89fe5e, #0e104752);
+  backdrop-filter: blur(25px);
   padding: 10px;
   border: 1px solid #08101b;
   margin-inline: 15px;
