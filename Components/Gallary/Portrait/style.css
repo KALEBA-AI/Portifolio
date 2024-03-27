@@ -77,10 +77,10 @@ body {
 }
 .rtop {
   align-self: flex-start;
-  width: 300px;
-  height: 100px;
+  width: 350px;
+  height: 125px;
   border-radius: 25px;
-  background-image: linear-gradient(to right, #5e89fe80, #0e104780);
+  background-image: linear-gradient(to right, #a1baff80, #0e104780);
   backdrop-filter: blur(15px);
   padding: 10px;
   transition: 500ms ease-in-out;
@@ -112,3 +112,4 @@ body {
   font-size: 30px;
   font-weight:lighter;
 }
+
