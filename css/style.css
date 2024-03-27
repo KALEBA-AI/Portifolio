@@ -43,11 +43,28 @@
   --main-text-color: #a3afbf;
   --button-color: #222a35;
 }
-/*Main Page css end*/
-body {
-  background: #08101b;
+.gap{
+gap:30px
 }
 
+.gap2{
+gap:15px
+}
+.color{
+  color: #a3afbf;
+}
+.color2{
+  color: #ffffff;
+}
+section {
+  margin-bottom: 50px;
+}
+body {
+  background: #08101b;
+  height: 300vh;
+}
+
+/*Main Page css end*/
 .top-container {
   position: absolute;
   width: var(--main-container-width);
@@ -154,8 +171,9 @@ body {
   gap: 5px;
 }
 .ex-ar {
-  transform:translateY(2px) ;
-  animation: 2.66s cubic-bezier(0.33, 1, 0.68, 1) 0s infinite normal none running bounce;
+  transform: translateY(2px);
+  animation: 2.66s cubic-bezier(0.33, 1, 0.68, 1) 0s infinite normal none
+    running bounce;
 }
 .card-button {
   position: relative;
@@ -166,6 +184,10 @@ body {
   border-radius: var(--button-border-radius);
   background: var(--button-color);
   cursor: pointer;
+  .arrow{
+    transition: all 500ms ease;
+  }
+  
 }
 .rtop-top {
   display: flex;
@@ -181,14 +203,18 @@ body {
   top: -22px;
   left: -55px;
 }
+.placeholder{
+  width: var(--button-width);
+  height: var(--button-height);
+}
 .contact {
-  position: relative;
+  position: fixed;
+  top: calc(var(--main-container-height) - 107px);
+  right:20px;
   display: flex;
   align-items: center;
   padding-inline: 10px;
   background-color: var(--button-color);
-  top: 0;
-  left: 0;
   width: var(--button-width);
   height: var(--button-height);
   border-radius: var(--button-border-radius);
@@ -202,8 +228,10 @@ body {
     font-weight: var(--font-black);
   }
   justify-content: space-between;
+  transition: all 500ms ease;
   cursor: pointer;
 }
+
 .contact::after {
   content: url(../../asset/Arrow@2x.png);
   display: flex;
@@ -216,27 +244,29 @@ body {
   height: var(--contact-wxh-after);
   background-image: radial-gradient(#0e1047 10%, #08101b);
   border-radius: var(--contact-bradius);
+  transition: all 500ms ease;
 }
 
 /* This section is for hover*/
 .card-button:hover {
   .arrow {
     transform: translateX(3px) translateY(-3px);
-    transition: all 500ms ease;
   }
 }
 .contact:hover::after {
   transform: translateX(3px) translateY(-3px);
-  transition: all 500ms ease;
-  .contact {
-    backdrop-filter: brightness(10);
-  }
+ 
 }
-
-
+ .contact:hover {
+    background-color:#2d3947;
+  }
 /*This is the section for Animation*/
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(2px);
   }
   40% {
@@ -244,5 +274,26 @@ body {
   }
   60% {
     transform: translateY(-3px);
+  }
+}
+
+/*Thise if for the text animation part*/
+
+
+/*Responsive Mode*/
+@media screen and (min-width: 1600px) {
+  :root {
+    --main-container-height: 753px;
+  }
+  .main-page-content {
+    height: 645px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  :root {
+    --main-container-height: 853px;
+  }
+  .main-page-content {
+    height: 745px;
   }
 }

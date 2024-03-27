@@ -78,9 +78,13 @@ body {
   height: 590px;
   width: 350px;
 }
-.g-right {
-  width: 405px;
-  height: 350px;
+.pg-leftb{
+  width: 350px;
+  height: 405px;
+}
+.pg-right {
+  width: 400px;
+  height: 525px;
 }
 .g-image {
   height: 100%;
@@ -127,11 +131,10 @@ body {
   width: 300px;
   height: 100px;
   border-radius: 25px;
-  background-image: linear-gradient(to right, #5e89fe5e, #0e104752);
+  background-image: linear-gradient(to right, #ffffff21, #b8baff27);
   backdrop-filter: blur(25px);
   padding: 10px;
   border: 1px solid #08101b;
-  margin-inline: 15px;
   transition: 800ms ease-in-out;
 }
 .rtop:hover {
@@ -162,5 +165,11 @@ body {
 .gallary-container-right {
   display: flex;
   flex-flow: column;
-  gap: 30px;
+}
+.gcrp{
+justify-content: center;
+}
+.gallary-container-left{
+  display: flex;
+  flex-direction: column;
 }
