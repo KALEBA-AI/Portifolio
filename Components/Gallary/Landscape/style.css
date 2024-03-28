@@ -98,7 +98,7 @@ body {
   width: 450px;
   align-self: flex-start;
   margin-left:20px;
-  font-weight: var(--font-light);
+  font-weight: var(--font-light) !important;
 }
 
 .gallary:hover {
