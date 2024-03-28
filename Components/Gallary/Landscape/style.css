@@ -80,11 +80,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-.g-left {
+.gl-left {
   height: 350px;
   width: 590px;
 }
-.g-right {
+.gl-right {
   width: 405px;
   height: 350px;
 }

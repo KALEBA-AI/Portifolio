@@ -10,16 +10,13 @@ body {
   background-color: #08101B;
   height: 200vh;
 }
-.glass {
-  display: flex;
-  position: relative;
-  width: 90%;
-  height: 90vh;
-  margin-inline: auto;
-  backdrop-filter: blur(50px);
-}
-.circle {
+.gradient-animation {
   position: absolute;
+  top: 170px;
+  left: 800px;
+  }
+.circle-green {
+  position: relative;
   width: 18rem;
   height: 8rem;
   top: 50%;
@@ -39,58 +36,43 @@ body {
   z-index: -10;
   animation: g-animation 35s infinite alternate;
 }
-.circle::before {
-  content: "";
-  position: absolute;
-  width: 5rem;
-  height: 2.5rem;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-image: linear-gradient(
-    to right,
-    #092b1e,
-    #041410,
-    #1697ec,
-    #1469ca
-  );
-  z-index: 1000;
-}
+
 .side-gradient {
   filter: blur(15px);
   position: absolute;
   transform: translate(-50%, -50%);
   transform-origin: left bottom;
 }
-.g1 {
+.gg1 {
   width: 20rem;
   top: 30%;
   left: 55%;
-  animation: g-animation 25s ease-in-out;
+  animation: g-animation 25s ease;
   animation-iteration-count: infinite;
 }
 
-.g2 {
+.gg2 {
   width: 15rem;
   top: 30%;
   left: 60%;
-  animation: g-animation2 25s ease-in-out;
+  animation: g-animation2 25s ease;
   animation-iteration-count: infinite;
 }
-.g3 {
+.gg3 {
   width: 27rem;
   top: 25%;
   left: 55%;
-  animation: g-animation3 45s ease-in-out;
+  animation: g-animation3 45s ease;
   animation-iteration-count: infinite;
 }
 .gradient-fixed{
-  position: absolute;
+  position: relative;
   width: 50rem;
-  top: -35%;
+  top: 80%;
   left: 35%;
   transform: rotate(-40deg);
 }
-@keyframes g-animation {
+/* @keyframes g-animation {
   0% {
     background-position: right;
     transform: rotate(0deg);
@@ -115,4 +97,4 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
+} */

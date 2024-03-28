@@ -38,22 +38,7 @@ body {
   z-index: -10;
   animation: g-animation 35s infinite alternate;
 }
-.circle::before {
-  content: "";
-  position: absolute;
-  width: 5rem;
-  height: 2.5rem;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-image: linear-gradient(
-    to right,
-    #2b0909,
-    #441410,
-    #180503,
-    #1f0406
-  );
-  z-index: 1000;
-}
+
 .side-gradient {
   filter: blur(15px);
   position: absolute;

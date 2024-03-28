@@ -51,9 +51,7 @@ body {
   align-items: center;
   height: 280svh;
 }
-h1 {
-  font-size: 80px;
-}
+
 .scroll-reveal {
   margin-left: 40px;
 }

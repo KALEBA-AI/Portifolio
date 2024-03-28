@@ -93,12 +93,6 @@ body {
   transition: 500ms ease-in-out;
 }
 
-.lbottom-text {
-  width: 450px;
-  align-self: flex-start;
-  margin: 15px 0px 0px 20px;
-  font-weight: var(--font-light);
-}
 
 .gallary:hover {
   .g-image {
@@ -135,7 +129,7 @@ body {
   backdrop-filter: blur(25px);
   padding: 10px;
   border: 1px solid #08101b;
-  transition: 800ms ease-in-out;
+  transition: 800ms ease;
 }
 .rtop:hover {
   border: 1px solid #ffffff;
