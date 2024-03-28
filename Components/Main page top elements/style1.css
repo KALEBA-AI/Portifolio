@@ -145,7 +145,7 @@ body {
   cursor: pointer;
 }
 .contact::after {
-  content: url(../../asset/Arrow@2x.png);
+  content: url(asset/);
   display: flex;
   align-items: center;
   justify-content: center;

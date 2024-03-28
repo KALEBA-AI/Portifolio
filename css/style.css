@@ -239,7 +239,7 @@ body {
 }
 
 .contact::after {
-  content: url(../../asset/Arrow@2x.png);
+  content: url(../asset/Arrows/Arrow@2x.png);
   display: flex;
   align-items: center;
   justify-content: center;
